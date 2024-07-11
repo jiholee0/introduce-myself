@@ -5,5 +5,5 @@
 ![자기소개](자기소개.gif)
 
 ![thumbnail](image/thumbnail01.png)
-![thumbnail](image/thumbnail01.png)
-![thumbnail](image/thumbnail01.png)
+![thumbnail](image/thumbnail02.png)
+![thumbnail](image/thumbnail03.png)
