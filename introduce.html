@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>이지호</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      h6 {
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .w3-third img {
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: -6px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .w3-third img:hover {
+        opacity: 1;
+      }
+
+      .w3-bar-item.w3-button {
+        display: block; /* 인라인 요소를 블록 요소로 변경하여 전체 너비를 차지하게 함 */
+        text-align: center; /* 텍스트를 가운데 정렬 */
+        padding: 10px 15px; /* 내부 여백 설정 (위 아래 10px, 좌 우 15px) */
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: #ffffff; /* 텍스트 색상 */
+        background-color: #a1a1a1; /* 배경색 */
+        border: 1px solid #a1a1a1; /* 테두리 */
+        transition: background-color 0.3s, color 0.3s; /* 전환 효과 */
+      }
+
+      .w3-bar-item.w3-button:hover {
+        background-color: #a1a1a1; /* 호버 시 배경색 변경 */
+        color: #ffffff; /* 호버 시 텍스트 색상 변경 */
+      }
+
+      /* 모달 내 이미지 스타일 */
+      .w3-modal-content .w3-image {
+        max-width: 100%; /* 최대 너비 설정 */
+        max-height: 80vh; /* 최대 높이 설정 */
+        margin: auto; /* 가운데 정렬 */
+        display: block; /* 블록 요소로 표시 */
+      }
+
+      .introduce {
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        color : black;
+        background-image: url("image/memo.png");
+        font-size: smaller;
+        background-size : cover;
+        width: 80%;
+        height: auto;
+      }
+
+
+    </style>
+  </head>
+  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-32 w3-center">
+        <b>LEE<br />JIHO</b>
+      </h3>
+      <h6>
+        안녕하세요, 백엔드 개발자를 희망하는<br />
+        SSAFY 12기 교육생 이지호입니다.
+      </h6>
+      <h6>
+        다 같이 으쌰으쌰해서<br />
+        저희 반 모두 B형을 땄으면 좋겠습니다 ✊🏻<br />
+        잘 부탁드립니다😊 <br /><br />
+      </h6>
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-padding w3-hide-large"
+        >CLOSE</a
+      >
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+      <a href="#moto" onclick="w3_close()" class="w3-bar-item w3-button">MOTO</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+      <span class="w3-left w3-padding">LEE JIHO</span>
+      <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- Photo grid -->
+      <div class="w3-row">
+        <div class="w3-third">
+          <img
+            src="image\university.jpg"
+            style="width: 100%"
+            onclick="onClick(this)"
+            alt="컴퓨터 공학을 전공하며 개발자의 꿈을 키웠습니다."
+          />
+          <img
+            src="image\fromu.jpg"
+            style="width: 100%"
+            onclick="onClick(this)"
+            alt="외부 동아리 CMC에 소속하여 FromU라는 앱을 런칭하였습니다."
+          />
+        </div>
+
+        <div class="w3-third">
+          <img
+            src="image\intern.jpg"
+            style="width: 100%"
+            onclick="onClick(this)"
+            alt="6개월 간 인턴으로 근무하며 개발자에 대한 확신을 갖게 되었습니다."
+          />
+          <img src="image\homelover.jpg" style="width: 100%" onclick="onClick(this)" alt="집순이" />
+        </div>
+
+        <div class="w3-third">
+          <img
+            src="image\presentation.jpg"
+            style="width: 100%"
+            onclick="onClick(this)"
+            alt="졸업 프로젝트로 논문을 쓰고 학회에 참가하기도 했습니다."
+          />
+          <img
+            src="image\shiba.jpg"
+            style="width: 100%"
+            onclick="onClick(this)"
+            alt="강아지를 굉장히 좋아합니다."
+          />
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+          <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+      </div>
+
+      <!-- Modal for full size images on click-->
+      <div
+        id="modal01"
+        class="w3-modal w3-black"
+        style="padding-top: 0"
+        onclick="this.style.display='none'"
+      >
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image" />
+          <p id="caption"></p>
+        </div>
+      </div>
+
+      <!-- About section -->
+      <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+        <h4><b>About Me</b></h4>
+
+        <div class="w3-row">
+          <!-- 왼쪽에 사진 -->
+          <div class="w3-col m6">
+            <img
+              src="image/me.JPG"
+              alt="Me"
+              class="w3-image w3-padding-32"
+              style="width: 100%; max-width: 300px; margin-left: 30%;"
+            />
+          </div>
+
+          <!-- 오른쪽에 내용 -->
+          <div class="w3-col m6 w3-container w3-left-align">
+            <div class="w3-row">
+              <div class="w3-col m6">
+                <h1><b>이지호</b></h1>
+                <h5>LEE JIHO</h5>
+              </div>
+            </div>
+
+            <div class="w3-row">
+              <div class="w3-col m6">
+                생년월일 : 2001.06.07 <br>
+                MBTI : ISFJ <br>
+                사는 곳 : 서울시 노원구 <br>
+              </div>
+              <div class="w3-col m6">
+                <img
+                  src="image/email.png"
+                  alt="email"
+                  style="width: 100%; max-width: 20px"
+                />
+                dlwlgh1254@naver.com <br>
+                <img
+                  src="image/github.png"
+                  alt="github"
+                  style="width: 100%; max-width: 20px"
+                />
+                <a href="https://github.com/jiholee0">
+                  jiholee0
+                </a> <br>
+                <img
+                  src="image/tistory.png"
+                  alt="github"
+                  style="width: 100%; max-width: 20px"
+                />
+                <a href="https://easyhomputer.tistory.com">
+                  tistory blog
+                </a>
+              </div>
+            </div>
+            
+            <p>
+              <div class = "introduce">
+                안녕하세요, 싸피 12기 <b>이지호</b>입니다.😊
+                <br><br>
+                저는 학교를 다니면서 실무 경험에 항상 갈증이 있었습니다. 
+                그래서 인턴을 해보기도 하고, 외부 동아리로 프로젝트 경험을 
+                쌓아 외주 개발도 도전해보았습니다.
+                <br><br>
+                그러나 막상 취업 시장에 뛰어드니 <b>'코딩테스트'</b>라는 벽에 부딪혔습니다. 
+                아마 저처럼 코딩테스트에 어려움을 느끼고, 알고리즘 능력을 쌓고자 오신 분이
+                많을 거라고 생각합니다.
+                <br><br>
+                비록 아직 많이 부족하지만, 같은 목표를 갖고 함께 성장해갈 동료가 많이 생긴 것 같아 기쁘고 설렙니다.
+                서로 으쌰으쌰하면서 저희 반 모두 알고리즘을 마스터하고 다양한 프로젝트 경험도 쌓아서 취뽀합시다 ㅎㅎ
+              </div>
+            </p>
+          </div>
+        </div>
+        <div>
+          <img
+                src="image/fighting.gif"
+                alt="github"
+                style="width: 100%; max-width: 500px"
+              />
+        </div>
+      </div>
+
+      <!-- Contact section -->
+      <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="moto">
+        <div class="w3-content" style="max-width: 600px">
+          <h4 class="w3-center"><b>MOTO</b></h4>
+          <p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </p>
+          <p class="w3-center">
+            "헛된 경험은 없다."
+          </p>
+          <p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-black w3-center w3-padding-24">
+        Made with
+        <a
+          href="https://www.w3schools.com/spaces"
+          title="spaces"
+          target="_blank"
+          class="w3-hover-opacity"
+          >W3Schools Spaces</a
+        >
+      </div>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        var modal = document.getElementById("modal01");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = element.src;
+        modalImg.alt = element.alt;
+        captionText.innerHTML = element.alt;
+      }
+
+      // 모달 닫기 버튼 설정
+      document.getElementById("modal01").onclick = function () {
+        this.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
